@@ -15,10 +15,10 @@ Markdown の見出し（ヘッダー）に対して、セクション番号が�
 
 ## インストール
 
-GitHub リポジトリから直接インストールします:
+[npm](https://www.npmjs.com/) 経由でインストールします:
 
 ```bash
-npm install gotokazuki/textlint-rule-header-numbering
+npm install textlint-rule-header-numbering
 ```
 
 ## 使い方

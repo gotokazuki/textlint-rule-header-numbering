@@ -15,10 +15,10 @@ A [textlint](https://github.com/textlint/textlint) rule to validate and automati
 
 ## Installation
 
-Install directly from the GitHub repository:
+Install via [npm](https://www.npmjs.com/):
 
 ```bash
-npm install gotokazuki/textlint-rule-header-numbering
+npm install textlint-rule-header-numbering
 ```
 
 ## Usage
