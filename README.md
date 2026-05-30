@@ -8,17 +8,17 @@ A [textlint](https://github.com/textlint/textlint) rule to validate and automati
 
 - **Sequential Check**: Ensures header numbering starts from `1.` and strictly follows the structural hierarchy (e.g., `1.1.`, `1.1.1.`).
 - **Auto Fixable**: Automatically adds missing section numbers or corrects incorrect ones using `textlint --fix`.
-- **Customizable Depth**: Define how deep the headers should be numbered (default is up to `###` level 3).
+- **Customizable Depth**: Define how deep the headers should be numbered (default is `6`, which effectively validates all headers since Markdown's maximum header level is 6).
 - **Format Options**: Supports arbitrary numbering formats by providing a template string (e.g., `"1.1."`, `"1-1"`, `"1/1/"`).
 - **Exclusion Support**: Ignore specific headers using keywords like `<!-- omit in toc -->`.
 - **Level Jump Detection**: Detects invalid header jumping (e.g., jumping from `#` to `###` without a `##` in between).
 
 ## Installation
 
-Install directly from the GitHub repository:
+Install via [npm](https://www.npmjs.com/):
 
 ```bash
-npm install gotokazuki/textlint-rule-header-numbering
+npm install textlint-rule-header-numbering
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ You can configure options in your `.textlintrc.json`:
         "header-numbering": {
             "format": "1.1.",
             "excludeKeywords": ["<!-- omit in toc -->"],
-            "depth": 3
+            "depth": 6
         }
     }
 }
@@ -76,9 +76,9 @@ You can configure options in your `.textlintrc.json`:
 ### `depth`
 
 - **Type**: `number`
-- **Default**: `3`
-- **Description**: Specifies how deep into the header hierarchy the validation should apply. A depth of `3` means it checks down to 3 levels from the base header.
-- **Example**: If your document starts with `##`, and depth is `3`, it will validate `##`, `###`, and `####`.
+- **Default**: `6`
+- **Description**: Specifies how deep into the header hierarchy the validation should apply. Since Markdown only supports up to 6 header levels (`#` to `######`), the default value of `6` ensures all headers in the document are validated.
+- **Example**: If your document starts with `##`, and depth is `2`, it will validate `##` and `###`.
 
 ## Examples
 
