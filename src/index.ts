@@ -18,7 +18,7 @@ const reporter: TextlintRuleModule<Options> = (context: TextlintRuleContext, opt
     }
 
     const excludeKeywords = options.excludeKeywords || [];
-    const maxDepth = options.depth || 3;
+    const maxDepth = options.depth ?? 6;
 
     let baseDepth: number | null = null;
     let previousDepth: number | null = null;
