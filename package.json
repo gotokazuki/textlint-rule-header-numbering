@@ -1,0 +1,43 @@
+{
+  "name": "textlint-rule-header-numbering",
+  "version": "0.1.0",
+  "description": "textlint rule to validate the sequence of section numbering in headers.",
+  "keywords": [
+    "textlintrule"
+  ],
+  "homepage": "https://github.com/gotokazuki/textlint-rule-header-numbering#readme",
+  "bugs": {
+    "url": "https://github.com/gotokazuki/textlint-rule-header-numbering/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gotokazuki/textlint-rule-header-numbering.git"
+  },
+  "license": "MIT",
+  "author": "gotokazuki",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "textlint-scripts test",
+    "lint": "eslint src/ test/",
+    "build": "textlint-scripts build",
+    "prepare": "npm run --if-present build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@textlint/types": "^15.7.1",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.1",
+    "textlint-scripts": "^15.7.1",
+    "textlint-tester": "^15.7.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0"
+  }
+}
