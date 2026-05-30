@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-header-numbering",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "textlint rule to validate the sequence of section numbering in headers.",
   "keywords": [
     "textlintrule"
